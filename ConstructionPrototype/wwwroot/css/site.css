@@ -34,12 +34,25 @@ body {
 
 .join-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 2fr);
     column-gap: 15px;
     row-gap: 15px;
 }
 
 .join-item {
-    display: table
+    padding: 20px;
+    display: grid;
+    grid-auto-columns: minmax(auto);
 }
+
+.join-us-padding{
+    margin: 20px;
+}
+
+.footer-grid {
+    display: flex;
+    align-items: center;
+}
+
+
 
