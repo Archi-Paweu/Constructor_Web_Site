@@ -15,5 +15,7 @@ namespace ConstructionPrototype.Models
         [DisplayName("Building Name")]
         public string BuildingName { get; set; }
 
+
+
     }
 }

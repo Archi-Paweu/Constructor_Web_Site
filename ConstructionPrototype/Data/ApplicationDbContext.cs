@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ConstructionPrototype.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConstructionPrototype.Data
 {
@@ -8,8 +9,9 @@ namespace ConstructionPrototype.Data
         {
 
         }
-    }
 
-    // public DbSet<Item> Items { get; set; }
+        public DbSet<Item> Items { get; set; }
+
+    }
 
 }
