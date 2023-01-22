@@ -24,7 +24,7 @@ namespace ConstructionPrototype.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ConstructionPrototype.Models.Item", b =>
+            modelBuilder.Entity("ConstructionPrototype.Models.Project", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

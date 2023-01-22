@@ -1,4 +1,4 @@
-﻿using ConstructionPrototype.Models;
+﻿using ConstructionPrototype.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConstructionPrototype.Data
@@ -10,7 +10,7 @@ namespace ConstructionPrototype.Data
 
         }
 
-        public DbSet<Item> Items { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
     }
 

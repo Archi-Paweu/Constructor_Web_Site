@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace ConstructionPrototype.Models
+namespace ConstructionPrototype.Data.Entities
 {
-    public class Item
+    public class Project
     {
 
         [Key]
