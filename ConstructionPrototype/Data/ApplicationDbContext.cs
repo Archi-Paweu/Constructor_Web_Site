@@ -11,6 +11,7 @@ namespace ConstructionPrototype.Data
         }
 
         public DbSet<Project> Projects { get; set; }
+        public DbSet<JobOffer> JobOffers { get; set; }
 
     }
 

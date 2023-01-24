@@ -2,7 +2,7 @@
 
 namespace ConstructionPrototype.Data.Entities
 {
-    public enum eJobType
+    public enum EJobType
     {
         FullTime,
         PartTime,
@@ -12,14 +12,16 @@ namespace ConstructionPrototype.Data.Entities
     {
         [Key]
         [Required]
-        public string JobId { get; set; }
+        public string Id { get; set; }
 
-        public string JobName { get; set; }
+        public string Name { get; set; }
 
-        public eJobType JobType { get; set; }
+        public EJobType Type { get; set; }
 
         public int Salary { get; set; }
 
-        public string JobLocation { get; set; }
+        public string Location { get; set; }
+
+        public string Description { get; set; }
     }
 }
