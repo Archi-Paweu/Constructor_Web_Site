@@ -18,5 +18,17 @@ namespace ConstructionPrototype.Controllers
         {
             return View();
         }
+
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
+        //[Route("/Service/LogIn/Create/JoinUsArticle")]
+        //[Route("/")]
+        public IActionResult CreateJoinUs()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Log in";
+}
+
+
+@*@if (userLogedIn = true)
+{
+    // buttons
+}
+else
+{
+    // log in page code
+}
+*@
+
+
+<div class="d-grid gap-2 col-6 mx-auto">
+    <p></p>
+    <a class="btn btn-primary" type="button" asp-controller="Service" asp-action="CreateJoinUs">Create job offer</a>
+
+    @* Disabled buttons*@
+    <a class="btn btn-primary" type="button" asp-controller="Service" asp-action="LogIn">Write home page article</a>
+    <a class="btn btn-primary" type="button" asp-controller="Service" asp-action="LogIn" >Add service</a>
+</div>
