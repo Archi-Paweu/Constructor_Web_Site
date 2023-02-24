@@ -1,42 +1,51 @@
 ﻿@model ConstructionPrototype.Data.Entities.JobOffer
 
 @{
-    ViewData["Title"] = "New Join Us article";
+    ViewData["Title"] = "New job offer.";
 }
 
 
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">Job Name</span>
-    <input class="form-control" asp-for="Name" type="text" />
-</div>
-
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Job Type</span>
-    <input class="form-control" asp-for="Type" type="text" />
-</div>
-
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Salary</span>
-    <input class="form-control" asp-for="Salary" type="text" />
-</div>
-
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Location</span>
-    <input class="form-control" asp-for="Location" type="text" />
-</div>
-
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Description</span>
-    <input class="form-control" asp-for="Description" type="text" />
-</div>
-
-<div class="form-group row">
-    <div class="create1 col-10 offset-2 row">
-        <div class="col">
-            <input class="btn btn-info w-75" type="submit" value="create" />
-        </div>
-        <div class="col">
-            <a class="btn btn-danger" asp-controller="Service" asp-action="LogIn">Go Back</a>
+<form method="post" asp-action="Create">
+    <div class="center">
+        <h3>Create new Join Us job offer.</h3>
+    </div>
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text width-chip" id="basic-addon1">Job Name</span>
+        <input class="form-control" asp-for="Name" type="text" />
+    </div>
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text width-chip" id="basic-addon1">Job Type</span>
+        <input class="form-control" asp-for="Type" type="text" />
+    </div>
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text width-chip" id="basic-addon1">Salary</span>
+        <input class="form-control" asp-for="Salary" type="text" />
+    </div>
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text width-chip" id="basic-addon1">Location</span>
+        <input class="form-control" asp-for="Location" type="text" />
+    </div>
+    
+    <div class="input-group mb-3 description-chip">
+        <span class="input-group-text width-chip" id="basic-addon1">Description</span>
+        <input class="form-control" asp-for="Description" type="text" />
+    </div>
+    
+    <div class="form-group row">
+        <div class="create1 col-10 offset-2 row center">
+    
+            <div class="col">
+                <input class="btn btn-info w-75" type="submit" value="Create" />
+            </div>
+    
+            <div class="col">
+                <a class="btn btn-danger" asp-controller="Service" asp-action="LogIn">Go Back</a>
+            </div>
+    
         </div>
     </div>
-</div>
+</form>

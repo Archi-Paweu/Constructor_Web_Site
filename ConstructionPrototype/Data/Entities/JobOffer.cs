@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConstructionPrototype.Data.Entities
 {
@@ -12,16 +13,17 @@ namespace ConstructionPrototype.Data.Entities
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
 
         public string Name { get; set; }
 
         public EJobType Type { get; set; }
 
-        public int Salary { get; set; }
+        public int? Salary { get; set; }
 
-        public string Location { get; set; }
+        public string? Location { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }
