@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\ConstructionPrototype.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\Logo.jpg",
+      "PackagePath": "staticwebassets\\Logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\Logo.png",
+      "PackagePath": "staticwebassets\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\Logo2.png",
+      "PackagePath": "staticwebassets\\Logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\LogoInvert.jpg",
+      "PackagePath": "staticwebassets\\LogoInvert.jpg"
+    },
+    {
       "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

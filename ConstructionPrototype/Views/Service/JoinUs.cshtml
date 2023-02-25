@@ -1,112 +1,42 @@
-﻿@{
+﻿@model IEnumerable<ConstructionPrototype.Data.Entities.JobOffer>
+
+@{
     ViewData["Title"] = "JoinUs";
 }
 
 <div class="text-center">
     <h1>@ViewData["Title"]</h1>
-
-    <p>Recruiting info. Grid</p>
-    <p>send email for recruitment@mail.com</p>
-
 </div>
 
 
-<div class="container join-item">
 
-    <div class="join-us-padding list-group-item-dark">
+    @if (Model.Count() > 0)
+    {
+        <div class="table" style="width:100%">
+           
+            
+            @foreach(var item in Model)
+            {
+                <div class="join-us-padding list-group-item-dark">
 
-        <h2>Bricklayer</h2>
-        <h5>Full time job</h5>
+                    <h3>@item.Name</h3>
+                    <h5>@item.Type job</h5>
+                    <p>@item.Salary € / month</p>
+                    <p>Location: @item.Location</p>
+                    <p>@item.Description</p>
 
-        <p>Responsibilities:</p>
-        <ul>
-            <li>Performing entrusted masonry works</li>
-            <li>Implementing of entrusted tiling works</li>
-        </ul>
-
-        <p>Requirements:</p>
-        <ul>
-            <li>Diligence and commitment</li>
-            <li>Work experience</li>
-        </ul>
-
-        <p>What we offer:</p>
-        <ul>
-            <li>Work in a young team in a dynamically developing prestigious company</li>
-            <li>High standard of work</li>
-            <li>High earnings and attractive discretionary bonuses</li>
-        </ul>
-    
-    </div>
-
-
-
-    <div class="join-us-padding list-group-item-dark">
-        
-        <h2>Construction engineer</h2>
-        <h5>Full time job</h5>
-
-
-        <p>Responsibilities:</p>
-
-        <ul>
-            <li>Technical supervision over the ongoing construction</li>
-            <li>Keeping construction documentation</li>
-            <li>Supervision of subcontractors and material suppliers</li>
-            <li>Reporting on the implementation of works</li>
-            <li>Analysis of technical and design documentation</li>
-        </ul>
-
-        <p>Requirements:</p>
-        <ul>
-            <li>Possession of building qualifications</li>
-            <li>Team manage skills and good work organization</li>
-            <li>Independence, commitment, reliability and responsibility</li>
-            <li>Driving license</li>
-            <li>Independence and self-discipline</li>
-        </ul>
-
-        <p>What we offer:</p>
-        <ul>
-            <li>Good and stable working conditions</li>
-            <li>Possibility of further professional development</li>
-            <li>Pleasant atmosphere at work</li>
-        </ul>
-
-    </div>
-
-
-
-    <div class="join-us-padding list-group-item-dark">
-
-        <h2>Contract Manager</h2>
-        <h5>Full time job</h5>
-
-        <p>Responsibilities:</p>
-        <ul>
-            <li>Carrying out the entrusted works in accordance with the construction art</li>
-            <li>Direct supervision over the execution of works based on the requirements of the contract</li>
-            <li>Technical documentation, schedules and work organization plans</li>
-            <li>Ongoing cooperation with subcontractors and suppliers</li>
-        </ul>
-
-        <p>Requirements:</p>
-        <ul>
-            <li>Very good organization of work under time pressure</li>
-            <li>Ability to manage multiple teams</li>
-            <li>Driving license</li>
-            <li>Building license</li>
-        </ul>
-
-        <p>What we offer:</p>
-        <ul>
-            <li>Stable work and the possibility of professional development in the company</li>
-            <li>Friendly working atmosphere</li>
-            <li>High salary and discretionary bonuses</li>
-        </ul>
-    </div>
-
-</div>
+                    <a class="btn btn-outline-dark" type="button" asp-controller="Service" asp-action="Contacts">Contact us now!</a>
+                </div>   
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <p>We do not look for new employees.</p>
+            <p>Be sure to check later!</p>
+        </div>
+    }
 
 
 
