@@ -33,7 +33,10 @@ namespace ConstructionPrototype.Controllers
             return View();
         }
 
-        //[Route("/Service/LogIn/Create/JoinUsArticle")]
+
+
+
+        // Creation of Join Us article
         public IActionResult CreateJoinUs()
         {
             return View();
@@ -46,6 +49,24 @@ namespace ConstructionPrototype.Controllers
             _db.Add(obj);
             _db.SaveChanges();
             return RedirectToAction("LogIn");
+        }
+
+
+
+
+        // Creation of Home Page article
+        public IActionResult CreateHomeArticle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateArticle(HomeArticle obj)
+        {
+            _db.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "HomeController");
         }
     }
 }
