@@ -11,29 +11,45 @@
     </div>
 
     <div class="input-group mb-3">
-        <span class="input-group-text width-chip" id="basic-addon1">Article Name</span>
+        <label  class="input-group-text width-chip" 
+                id="basic-addon1">
+                Article Name
+        </label>
+
         <input class="form-control" asp-for="Title" type="text" />
+
     </div>
 
     <div class="input-group mb-3 description-chip">
-        <span class="input-group-text width-chip">In short</span>
-        <textarea class="form-control" aria-label="With textarea" asp-for="ShortDescription" type="text"></textarea>
+        <label class="input-group-text width-chip">In short</label>
+        <textarea   class="form-control" 
+                    aria-label="With textarea"
+                    type="text"
+                    asp-for="ShortDescription">
+        </textarea>
     </div>
 
     <div class="input-group mb-3 description-chip">
-        <span class="input-group-text width-chip">Description</span>
-        <textarea class="form-control" aria-label="With textarea" asp-for="Description" type="text"></textarea>
+        <label class="input-group-text width-chip">Description</label>
+        <textarea   class="form-control" 
+                    aria-label="With textarea" 
+                    asp-for="Description" 
+                    type="text">
+        </textarea>
+        
     </div>
 
-    <div class="input-group mb-3 description-chip">
-        <label class="input-group-text width-chip" for="img">Select image:</label>
-        <input type="file" id="img" name="img" accept="image/*">
-    </div> 
-   
+    @*
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <input type="submit">
+    *@
 
-    <div>
+    <label>Choose a profile picture:</label>
+    <input type="file"
+           name="img"
+           accept="image/png, image/jpeg">
 
-    </div>
 
     <div class="form-group row">
         <div class="create1 col-10 offset-2 row center">
@@ -43,7 +59,11 @@
             </div>
 
             <div class="col">
-                <a class="btn btn-danger" asp-controller="Service" asp-action="LogIn">Go Back</a>
+                <a  class="btn btn-danger" 
+                    asp-controller="Service" 
+                    asp-action="LogIn">
+                    Go Back
+                </a>
             </div>
 
         </div>
