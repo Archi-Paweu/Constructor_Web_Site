@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<ConstructionPrototype.Data.Entities.HomeArticle>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,3 +9,28 @@
     <h1>@ViewData["Title"]</h1>
     <p>Learn about building Web apps with ASP.NET Core.</p>
 </div>
+
+@*
+@if (Model.Count() > 0)
+{
+    <div class="table" style="width:100%">
+
+        @foreach (var item in Model)
+        {
+            <div class="join-us-padding list-group-item-dark">
+
+                <h3>@item.Title</h3>
+                <h5>@item.ShortDescription</h5>
+                <p>@item.Description</p>
+
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <p>No news yet. </p>
+    </div>
+}
+*@

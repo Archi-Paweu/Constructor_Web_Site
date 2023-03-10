@@ -273,6 +273,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\teamwork_pic.webp",
+      "PackagePath": "staticwebassets\\teamwork_pic.webp"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ConstructionPrototype.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
