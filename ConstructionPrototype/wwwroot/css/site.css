@@ -123,8 +123,6 @@ body {
 
 /*---------------------------------------*/
 
-
-
 input[type=file]::file-selector-button {
     margin-right: 20px;
     border: none;
@@ -138,4 +136,10 @@ input[type=file]::file-selector-button {
 
 input[type=file]::file-selector-button:hover {
         background: #0d45a5;
+}
+
+/*---------------------------------------*/
+
+.btn-pad {
+    margin: 0.5rem;
 }

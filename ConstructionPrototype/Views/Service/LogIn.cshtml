@@ -42,11 +42,62 @@ else
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
-    <a class="btn btn-primary btn-lg" type="button" asp-controller="Service" asp-action="CreateJoinUs">Create job offer</a>
 
-    <a class="btn btn-primary btn-lg" type="button" asp-controller="Service" asp-action="CreateHomeArticle">Write home page article</a>
+    <div class="row g-3">
+        <a class="col-sm-7 btn btn-primary btn-lg btn-pad"
+            type="button" 
+            asp-controller="Service" 
+            asp-action="CreateJoinUs">
+            Create job offer
+        </a>
 
-    <a class="btn btn-secondary btn-lg" type="button" asp-controller="Service" asp-action="LogIn" disabled>Add service</a>
+        <a class="col-sm btn btn-primary btn-lg btn-pad"
+           type="button"
+           asp-controller="Service"
+           asp-action="CreateJoinUs">
+           Edit job offer
+        </a>
+    </div>
+
+
+    <div class="row g-3">
+
+        <a class="col-sm-7 btn btn-primary btn-lg btn-pad"
+           type="button" 
+            asp-controller="Service" 
+            asp-action="CreateHomeArticle">
+            Write home page article
+        </a>
+
+        <a class="col-sm btn btn-primary btn-lg btn-pad"
+           type="button"
+           asp-controller="Service"
+           asp-action="CreateHomeArticle">
+           Edit home page
+        </a>
+
+    </div>
+     
+    <div class="row g-3">
+
+        <a class="col-sm-7 btn btn-secondary btn-lg btn-pad"
+               type="button" 
+                asp-controller="Service" 
+                asp-action="LogIn" 
+                disabled>
+                Add service
+        </a>
+
+        <a class="col-sm btn btn-secondary btn-lg btn-pad"
+           type="button"
+           asp-controller="Service"
+           asp-action="LogIn"
+           disabled>
+           Edit
+        </a>
+
+    </div>
+
 </div>
 
 
@@ -55,11 +106,23 @@ else
 </div>
 
 <div class="form-floating mb-3 center-next">
-    <input type="email" class="form-control" id="floatingInput" placeholder="login here">
-    <label for="floatingInput">Login</label>
+    <input  type="email" 
+            class="form-control" 
+            id="floatingInput" 
+            placeholder="login here">
+
+    <label for="floatingInput">
+        Login
+    </label>
 </div>
 
 <div class="form-floating center-next">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="password here">
-    <label for="floatingPassword">Password</label>
+    <input  type="password" 
+            class="form-control" 
+            id="floatingPassword" 
+            placeholder="password here">
+
+    <label for="floatingPassword">
+        Password
+    </label>
 </div>

@@ -1,4 +1,6 @@
-﻿using ConstructionPrototype.Models;
+﻿using ConstructionPrototype.Data;
+using ConstructionPrototype.Data.Entities;
+using ConstructionPrototype.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,16 +8,17 @@ namespace ConstructionPrototype.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _dbs;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext dbs)
         {
-            _logger = logger;
+            _dbs = dbs;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<HomeArticle> objList = _dbs.HomeArticles;
+            return View(objList);
         }
 
         public IActionResult Privacy()

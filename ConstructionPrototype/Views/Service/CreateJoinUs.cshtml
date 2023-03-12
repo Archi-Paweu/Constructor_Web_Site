@@ -11,28 +11,56 @@
     </div>
     
     <div class="input-group mb-3">
-        <span class="input-group-text width-chip" id="basic-addon1">Job Name</span>
-        <input class="form-control" asp-for="Name" type="text" />
+        <span   class="input-group-text width-chip" 
+                id="basic-addon1">
+                Job Name
+        </span>
+        <input  class="form-control" 
+                asp-for="Name" 
+                type="text"/>
     </div>
     
     <div class="input-group mb-3">
-        <span class="input-group-text width-chip" id="basic-addon1">Job Type</span>
-        <input class="form-control" asp-for="Type" type="text" />
+
+        <span   class="input-group-text width-chip" 
+                id="basic-addon1">
+                Job Type
+        </span>
+
+        <input  class="form-control" 
+                asp-for="Type" 
+                type="text"/>
     </div>
     
     <div class="input-group mb-3">
-        <span class="input-group-text width-chip" id="basic-addon1">Salary</span>
-        <input class="form-control" asp-for="Salary" type="text" />
+        <span   class="input-group-text width-chip" 
+                id="basic-addon1">
+                Salary
+        </span>
+        <input  class="form-control" 
+                asp-for="Salary" 
+                type="text"/>
     </div>
     
     <div class="input-group mb-3">
-        <span class="input-group-text width-chip" id="basic-addon1">Location</span>
-        <input class="form-control" asp-for="Location" type="text" />
+        <span   class="input-group-text width-chip" 
+                id="basic-addon1">
+                Location
+        </span>
+        <input  class="form-control" 
+                asp-for="Location" 
+                type="text"/>
     </div>
 
     <div class="input-group mb-3 description-chip">
-        <span class="input-group-text width-chip">Description</span>
-        <textarea class="form-control" aria-label="With textarea" asp-for="Description" type="text"></textarea>
+        <span class="input-group-text width-chip">
+            Description
+        </span>
+        <textarea   class="form-control" 
+                    aria-label="With textarea" 
+                    asp-for="Description" 
+                    type="text">
+        </textarea>
     </div>
 
     
@@ -40,11 +68,17 @@
         <div class="create1 col-10 offset-2 row center">
     
             <div class="col">
-                <input class="btn btn-info w-75" type="submit" value="Create" />
+                <input  class="btn btn-info w-75" 
+                        type="submit" 
+                        value="Create"/>
             </div>
     
             <div class="col">
-                <a class="btn btn-danger" asp-controller="Service" asp-action="LogIn">Go Back</a>
+                <a  class="btn btn-danger" 
+                    asp-controller="Service" 
+                    asp-action="LogIn">
+                    Go Back
+                </a>
             </div>
     
         </div>

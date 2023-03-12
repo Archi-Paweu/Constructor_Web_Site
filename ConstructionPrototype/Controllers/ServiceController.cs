@@ -66,7 +66,7 @@ namespace ConstructionPrototype.Controllers
         {
             _db.Add(obj);
             _db.SaveChanges();
-            return RedirectToAction("Index", "HomeController");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

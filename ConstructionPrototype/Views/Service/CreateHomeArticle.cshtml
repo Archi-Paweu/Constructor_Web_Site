@@ -5,7 +5,7 @@
 }
 
 
-<form method="post" asp-action="CreateHomeArticle">
+<form method="post" asp-action="CreateArticle">
     <div class="center">
         <h3>Create new Home Page article.</h3>
     </div>
@@ -16,7 +16,9 @@
                 Article Name
         </label>
 
-        <input class="form-control" asp-for="Title" type="text" />
+        <input  class="form-control" 
+                asp-for="Title" 
+                type="text"/>
 
     </div>
 
@@ -44,18 +46,21 @@
     <input type="file" id="img" name="img" accept="image/*">
     <input type="submit">
     *@
-
-    <label>Choose a profile picture:</label>
-    <input type="file"
-           name="img"
-           accept="image/png, image/jpeg">
+    <div class="input-group mb-3 description-chip">
+        <label class="input-group-text width-chip">Image</label>
+        <input type="file"
+               name="img"
+               accept="image/png, image/jpeg">
+    </div>
 
 
     <div class="form-group row">
         <div class="create1 col-10 offset-2 row center">
 
             <div class="col">
-                <input class="btn btn-info w-75" type="submit" value="Create" />
+                <input  class="btn btn-info w-75" 
+                        type="submit" 
+                        value="Create"/>
             </div>
 
             <div class="col">

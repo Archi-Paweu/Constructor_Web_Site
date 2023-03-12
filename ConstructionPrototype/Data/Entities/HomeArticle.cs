@@ -24,7 +24,7 @@ namespace ConstructionPrototype.Data.Entities
         public string? Description { get; set; }
 
 
-        public byte? Image { get; set; }
+        public byte[]? Image { get; set; }
 
     }
 }
