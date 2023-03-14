@@ -5,25 +5,27 @@
 }
 
 
-<form method="post" asp-action="CreateArticle">
+<form method="post" asp-action="CreateArticle" enctype="multipart/form-data">
     <div class="center">
         <h3>Create new Home Page article.</h3>
     </div>
 
     <div class="input-group mb-3">
-        <label  class="input-group-text width-chip" 
-                id="basic-addon1">
-                Article Name
+        <label      class="input-group-text width-chip">
+                    Article Name
         </label>
 
-        <input  class="form-control" 
-                asp-for="Title" 
-                type="text"/>
+        <input      class="form-control" 
+                    asp-for="Title" 
+                    type="text"/>
 
     </div>
 
     <div class="input-group mb-3 description-chip">
-        <label class="input-group-text width-chip">In short</label>
+        <label      class="input-group-text width-chip">
+                    In short
+        </label>
+
         <textarea   class="form-control" 
                     aria-label="With textarea"
                     type="text"
@@ -32,7 +34,10 @@
     </div>
 
     <div class="input-group mb-3 description-chip">
-        <label class="input-group-text width-chip">Description</label>
+        <label      class="input-group-text width-chip">
+                    Description
+        </label>
+
         <textarea   class="form-control" 
                     aria-label="With textarea" 
                     asp-for="Description" 
@@ -47,10 +52,15 @@
     <input type="submit">
     *@
     <div class="input-group mb-3 description-chip">
-        <label class="input-group-text width-chip">Image</label>
-        <input type="file"
-               name="img"
-               accept="image/png, image/jpeg">
+        <label      class="input-group-text width-chip"
+                    asp-for="Image">
+                    Image
+        </label>
+
+        <input      type="file"
+                    id="Image" 
+                    asp-for="Image"
+                    accept="image/png, image/jpeg"/>
     </div>
 
 
@@ -64,10 +74,10 @@
             </div>
 
             <div class="col">
-                <a  class="btn btn-danger" 
-                    asp-controller="Service" 
-                    asp-action="LogIn">
-                    Go Back
+                <a      class="btn btn-danger" 
+                        asp-controller="Service" 
+                        asp-action="LogIn">
+                        Go Back
                 </a>
             </div>
 

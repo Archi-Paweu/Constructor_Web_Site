@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zvanw8DfX2vUKxunKzkM6L43OaukB98RhG/GzR/952U=",
+  "Hash": "Vkq+EFbr5fNebzC1/YNAhHF1fwDpcdsqqLucoy4qfNs=",
   "Source": "ConstructionPrototype",
   "BasePath": "_content/ConstructionPrototype",
   "Mode": "Default",
@@ -1173,12 +1173,12 @@
       "OriginalItemSpec": "wwwroot\\Logo.png"
     },
     {
-      "Identity": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\teamwork_pic.webp",
+      "Identity": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\teamwork_pic.jpg",
       "SourceId": "ConstructionPrototype",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\",
       "BasePath": "_content/ConstructionPrototype",
-      "RelativePath": "teamwork_pic.webp",
+      "RelativePath": "teamwork_pic.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,7 +1187,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\teamwork_pic.webp"
+      "OriginalItemSpec": "wwwroot\\teamwork_pic.jpg"
     }
   ]
 }

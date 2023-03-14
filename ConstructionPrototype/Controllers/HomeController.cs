@@ -15,6 +15,7 @@ namespace ConstructionPrototype.Controllers
             _dbs = dbs;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             IEnumerable<HomeArticle> objList = _dbs.HomeArticles;

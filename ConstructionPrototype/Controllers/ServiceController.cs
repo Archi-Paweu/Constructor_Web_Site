@@ -62,7 +62,7 @@ namespace ConstructionPrototype.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateArticle(HomeArticle obj)
+        public IActionResult CreateArticle(HomeArticle obj, List<IFormFile> Image)
         {
             _db.Add(obj);
             _db.SaveChanges();

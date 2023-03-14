@@ -17,12 +17,15 @@
 
         @foreach (var item in Model)
         {
-            <div class="join-us-padding list-group-item-dark">
-
-                <h3>@item.Title</h3>
-                <h5>@item.ShortDescription</h5>
+            <div class="join-us-padding home-art d-grid mx-auto">
+                <div class="row g-3">
+                    <div class="col-sm">
+                        <h3>@item.Title</h3>
+                        <h5>@item.ShortDescription</h5>
+                    </div>
+                    <p class="col-sm-6">@item.Image</p>
+                </div>
                 <p>@item.Description</p>
-
             </div>
         }
     </div>
@@ -30,6 +33,6 @@
 else
 {
     <div class="text-center">
-        <p>No news yet. </p>
+        <p>No news yet.</p>
     </div>
 }
