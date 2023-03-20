@@ -1,6 +1,8 @@
 ﻿using ConstructionPrototype.Data;
 using ConstructionPrototype.Data.Entities;
+using ConstructionPrototype.Models;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace ConstructionPrototype.Controllers
 {
@@ -55,18 +57,45 @@ namespace ConstructionPrototype.Controllers
 
 
         // Creation of Home Page article
-        public IActionResult CreateHomeArticle()
+        public IActionResult CreateHomeArticle(HomeArticleCreateForm? CreateForm = null)
         {
-            return View();
+            HomeArticleCreateViewModel viewModel = new HomeArticleCreateViewModel
+            {
+                CreateForm = CreateForm == null ? new HomeArticleCreateForm() : CreateForm,
+                ActionPath = "CreateArticle"
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateArticle(HomeArticle obj, List<IFormFile> Image)
+        public async Task<IActionResult> CreateArticle(HomeArticleCreateForm CreateForm)
         {
-            _db.Add(obj);
+            if (!ModelState.IsValid) // jeśli formularz jest błędny wraca do jego wyświetlania
+            {
+                return RedirectToAction("CreateHomeArticle", new { CreateForm = CreateForm });
+            }
+
+            // inicjalizacja danych z formularza
+            HomeArticle article = new HomeArticle
+            {
+                Description = CreateForm.Description,
+                ShortDescription = CreateForm.ShortDescription,
+                Title = CreateForm.Title,
+                Image = await IFormFileToBytes(CreateForm.Image)
+            };
+
+            _db.Add(article);
             _db.SaveChanges();
             return RedirectToAction("Index", "Home");
+        }
+
+        private async Task<byte[]> IFormFileToBytes(IFormFile file)
+        {
+            using var dataStream = new MemoryStream();
+            await file.CopyToAsync(dataStream);
+            return dataStream.ToArray();
         }
     }
 }
