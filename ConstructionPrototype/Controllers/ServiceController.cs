@@ -74,7 +74,7 @@ namespace ConstructionPrototype.Controllers
         {
             if (!ModelState.IsValid) // jeśli formularz jest błędny wraca do jego wyświetlania
             {
-                return RedirectToAction("CreateHomeArticle", new { CreateForm = CreateForm });
+                return RedirectToAction("CreateHomeArticle");
             }
 
             // inicjalizacja danych z formularza

@@ -18,8 +18,8 @@ namespace ConstructionPrototype.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            IEnumerable<HomeArticle> objList = _dbs.HomeArticles;
-            return View(objList);
+            IEnumerable<HomeArticle> objListHA = _dbs.HomeArticles;
+            return View(objListHA);
         }
 
         public IActionResult Privacy()
