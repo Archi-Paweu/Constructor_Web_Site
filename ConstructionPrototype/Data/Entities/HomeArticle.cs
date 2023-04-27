@@ -26,5 +26,6 @@ namespace ConstructionPrototype.Data.Entities
 
         public byte[]? Image { get; set; }
 
+
     }
 }

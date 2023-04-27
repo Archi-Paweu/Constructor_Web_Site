@@ -18,8 +18,23 @@ namespace ConstructionPrototype.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            IEnumerable<HomeArticle> objListHA = _dbs.HomeArticles;
-            return View(objListHA);
+            IEnumerable<HomeArticle> objList = _dbs.HomeArticles;
+            return View(objList);
+        }
+
+        public IActionResult ArticleDetails(string id)
+        {
+            var article = _dbs.HomeArticles.Where(article => article.Id.Equals(id)).FirstOrDefault();
+
+
+            if (article == null)
+            {
+
+                return NotFound();
+            }
+
+
+            return View(article);
         }
 
         public IActionResult Privacy()
@@ -36,6 +51,13 @@ namespace ConstructionPrototype.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public string byteArrayToImage(byte[] bytesArr)
+        {
+            var base64 = Convert.ToBase64String(bytesArr);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            return imgSrc;
         }
     }
 }

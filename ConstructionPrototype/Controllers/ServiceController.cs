@@ -37,7 +37,6 @@ namespace ConstructionPrototype.Controllers
 
 
 
-
         // Creation of Join Us article
         public IActionResult CreateJoinUs()
         {
@@ -54,9 +53,8 @@ namespace ConstructionPrototype.Controllers
         }
 
 
-
-
         // Creation of Home Page article
+        [HttpGet]
         public IActionResult CreateHomeArticle(HomeArticleCreateForm? CreateForm = null)
         {
             HomeArticleCreateViewModel viewModel = new HomeArticleCreateViewModel
@@ -72,12 +70,12 @@ namespace ConstructionPrototype.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateArticle(HomeArticleCreateForm CreateForm)
         {
-            if (!ModelState.IsValid) // jeśli formularz jest błędny wraca do jego wyświetlania
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("CreateHomeArticle");
             }
 
-            // inicjalizacja danych z formularza
+            // inicjalizacja danych z formularza do bazy danych
             HomeArticle article = new HomeArticle
             {
                 Description = CreateForm.Description,
