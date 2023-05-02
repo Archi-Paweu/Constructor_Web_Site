@@ -18,7 +18,7 @@
 
         <input class="form-control"
                asp-for="@Model.CreateForm.Title"
-               type="text" />
+               type="text"/>
 
     </div>
 
@@ -28,10 +28,11 @@
                In short
         </label>
 
-        <textarea class="form-control"
-                  aria-label="With textarea"
-                  type="text"
-                  asp-for="@Model.CreateForm.ShortDescription">
+        <textarea 
+               class="form-control"
+               aria-label="With textarea"
+               type="text"
+               asp-for="@Model.CreateForm.ShortDescription">
         </textarea>
     </div>
 
@@ -42,9 +43,9 @@
         </label>
 
         <textarea class="form-control"
-                  aria-label="With textarea"
-                  asp-for="@Model.CreateForm.Description"
-                  type="text">
+               aria-label="With textarea"
+               asp-for="@Model.CreateForm.Description"
+               type="text">
         </textarea>
 
     </div>

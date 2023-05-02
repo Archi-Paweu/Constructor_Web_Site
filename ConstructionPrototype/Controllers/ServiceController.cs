@@ -75,7 +75,7 @@ namespace ConstructionPrototype.Controllers
                 return RedirectToAction("CreateHomeArticle");
             }
 
-            // inicjalizacja danych z formularza do bazy danych
+
             HomeArticle article = new HomeArticle
             {
                 Description = CreateForm.Description,

@@ -1,8 +1,8 @@
 ﻿using ConstructionPrototype.Data;
-using ConstructionPrototype.Data.Entities;
 using ConstructionPrototype.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+
 
 namespace ConstructionPrototype.Controllers
 {
@@ -18,10 +18,29 @@ namespace ConstructionPrototype.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            IEnumerable<HomeArticle> objList = _dbs.HomeArticles;
-            return View(objList);
+            var objList = _dbs.HomeArticles;
+
+            List<HomeArticleViewModel> displayList = new List<HomeArticleViewModel>();
+
+
+            foreach (var item in objList)
+            {
+                displayList.Add(new HomeArticleViewModel
+                {
+                    Title = item.Title,
+                    ShortDescription = item.ShortDescription,
+                    Description = item.Description,
+                    Image = item.Image,
+                    displayImage = byteArrayToImage(item.Image)
+
+                });
+
+            }
+
+            return View(displayList);
         }
 
+        // detale artykułu
         public IActionResult ArticleDetails(string id)
         {
             var article = _dbs.HomeArticles.Where(article => article.Id.Equals(id)).FirstOrDefault();
@@ -29,7 +48,6 @@ namespace ConstructionPrototype.Controllers
 
             if (article == null)
             {
-
                 return NotFound();
             }
 
@@ -53,11 +71,15 @@ namespace ConstructionPrototype.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public string byteArrayToImage(byte[] bytesArr)
+        private string byteArrayToImage(byte[] bytesArr)
         {
-            var base64 = Convert.ToBase64String(bytesArr);
-            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-            return imgSrc;
+            if (bytesArr != null)
+            {
+                var base64 = Convert.ToBase64String(bytesArr);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                return imgSrc;
+            }
+            else return null;
         }
     }
 }

@@ -1,15 +1,9 @@
-﻿@model IEnumerable<ConstructionPrototype.Data.Entities.HomeArticle>
+﻿@model IEnumerable<ConstructionPrototype.Models.HomeArticleViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
-    string byteArrayToImage(byte[] bytesArr)
-    {
-        var base64 = Convert.ToBase64String(bytesArr);
-        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-        return imgSrc;
-    }
+    
 }
-
 
 
 
@@ -35,7 +29,7 @@
                             <h6>@item.Description</h6>
                         </div>
                         <div class="col-3">
-                            <img src="@byteArrayToImage(item.Image)">
+                            <img src="@item.displayImage">
                         </div>
                     </div> 
                 </div>
