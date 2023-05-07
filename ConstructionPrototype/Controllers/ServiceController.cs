@@ -27,6 +27,8 @@ namespace ConstructionPrototype.Controllers
 
         public IActionResult Contacts()
         {
+
+
             return View();
         }
 
@@ -91,9 +93,13 @@ namespace ConstructionPrototype.Controllers
 
         private async Task<byte[]> IFormFileToBytes(IFormFile file)
         {
-            using var dataStream = new MemoryStream();
-            await file.CopyToAsync(dataStream);
-            return dataStream.ToArray();
+            if (file != null)
+            {
+                using var dataStream = new MemoryStream();
+                await file.CopyToAsync(dataStream);
+                return dataStream.ToArray();
+            }
+            else return null;
         }
     }
 }

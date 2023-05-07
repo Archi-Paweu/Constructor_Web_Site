@@ -269,6 +269,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\office_building.jpg",
+      "PackagePath": "staticwebassets\\office_building.jpg"
+    },
+    {
+      "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\office_building.png",
+      "PackagePath": "staticwebassets\\office_building.png"
+    },
+    {
       "Id": "C:\\Users\\w-sta\\source\\repos\\ConstructionPrototype\\ConstructionPrototype\\wwwroot\\teamwork_pic.jpg",
       "PackagePath": "staticwebassets\\teamwork_pic.jpg"
     },

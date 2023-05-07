@@ -152,3 +152,18 @@ input[type=file]::file-selector-button:hover {
     border-color: #4E5B66;
     border-radius: 25px;
 }
+
+/*---------------------------------------*/
+
+.contact-mail-parent {
+    display: flex;
+}
+
+.contact-mail-child{
+    
+}
+
+.contact-mail-img {
+    width: 255px;
+    height: 85px;
+}

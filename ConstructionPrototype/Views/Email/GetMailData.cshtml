@@ -1,0 +1,72 @@
+﻿@model ConstructionPrototype.Models.Email.EmailSenderViewModel
+
+@{
+    ViewData["Title"] = "New Home article.";
+}
+
+<div class="row g-3 contact-mail-parent">
+    <div class="col-3">
+        <img class="contact-mail-img" src="~/Logo.png" alt="Company logo">
+        <h1>Construction </h1>
+        <h1>Company Ltd.</h1>
+        <p></p>
+        <p>ul. Bułgarska 3</p>
+        <p>85-162 Bydgoszcz</p>
+        <p>tel. +48 123 456 789</p>
+    </div>
+
+
+
+    <div class="col">
+        <form method="post" asp-action="@Model.ActionPath">
+            <div class="row row-gutter">
+                <div class="row row-gutter">
+                    <div class="col-sm-12 form-group">
+                        <input asp-for="@Model.CreateFormMail.Receiver"
+                               class="form-control"
+                               placeholder="Your e-mail"
+                               required>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <input asp-for="@Model.CreateFormMail.Subject"
+                               class="form-control"
+                               placeholder="Subject"
+                               required>
+                    </div>
+                </div>
+        
+                <textarea asp-for="@Model.CreateFormMail.Message"
+                               class="form-control"
+                               name="comments" 
+                               placeholder="Write us here your message."
+                               required
+                               rows="5">
+                </textarea>
+        
+                <div class="row row-gutter">
+                    <div class="col-md-12 form-group">
+                        <button class="btn btn-primary"
+                                type="submit">
+                            Send email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+
+<div class="mapouter row-map">
+    <div class="gmap_canvas" position: relative>
+        <iframe width="100%"
+                height="450"
+                src="https://maps.google.com/maps?width=520&amp;height=451&amp;hl=en&amp;q=Bu%C5%82garska%203%20Bydgoszcz+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0">
+        </iframe>
+    </div>
+</div>

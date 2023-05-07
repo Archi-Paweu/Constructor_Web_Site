@@ -1,7 +1,5 @@
-﻿using ConstructionPrototype.Models;
-using ConstructionPrototype.Models.Email;
+﻿using ConstructionPrototype.Models.Email;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace ConstructionPrototype.Controllers
 {
@@ -13,22 +11,29 @@ namespace ConstructionPrototype.Controllers
             this._emailSender = emailSender;
         }
 
-        public async Task<IActionResult> SendEmail()
+        [HttpGet]
+        public IActionResult GetMailData([FromForm] EmailForm? CreateFormMail = null)
         {
-            var receiver = "";
-            var subject = "";
-            var message = "";
 
-            await _emailSender.SendEmailAsync(receiver, subject, message);
+            EmailSenderViewModel viewModel = new EmailSenderViewModel
+            {
+                CreateFormMail = CreateFormMail == null ? new EmailForm() : CreateFormMail,
+                ActionPath = "SendEmail",
+                ControllerPath = "Email"
 
-            return View();
+            };
+            return View(viewModel);
         }
 
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> SendEmail([FromForm] EmailForm CreateFormMail)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            await _emailSender.SendEmailAsync(CreateFormMail.Receiver, CreateFormMail.Subject, CreateFormMail.Message);
+
+            return RedirectToAction("Contacts", "Service");
         }
+
     }
 }

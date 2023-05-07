@@ -11,16 +11,16 @@ namespace ConstructionPrototype.Data.Entities
         public string Id { get; set; }
 
 
-        [StringLength(20, MinimumLength = 4, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
+        [StringLength(50, MinimumLength = 4, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
         public string Title { get; set; }
 
 
         [Display(Name = "Short Description")]
-        [StringLength(100, MinimumLength = 20, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
+        [StringLength(400, MinimumLength = 20, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
         public string ShortDescription { get; set; }
 
 
-        [StringLength(500, MinimumLength = 20, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
+        [StringLength(5000, MinimumLength = 20, ErrorMessage = "{0} should be between {2} and {1} characters long.")]
         public string? Description { get; set; }
 
 
