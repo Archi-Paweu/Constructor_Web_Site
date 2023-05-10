@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="6.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SQL script\" />
+  </ItemGroup>
+
 </Project>
